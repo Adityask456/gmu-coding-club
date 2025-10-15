@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+🧑‍💻 GMU Coding Club Website
 
-## Project info
+An interactive and responsive web platform built for the GMU Coding Club to showcase club activities, upcoming events, projects, and resources.
+The website allows students to register for events and staff coordinators to add events directly, creating a centralized and engaging platform for all members.
 
-**URL**: https://lovable.dev/projects/d1400008-f49a-4c7b-8e4f-79669ec23715
+🌟 Overview
 
-## How can I edit this code?
+The GMU Coding Club Website serves as the official digital hub for coding enthusiasts at GMU.
+It provides information about ongoing and upcoming club activities, encourages student participation through event registrations, and highlights previous projects and achievements of club members.
 
-There are several ways of editing your application.
+🚀 Key Features
+🏠 Homepage
 
-**Use Lovable**
+Displays club introduction, mission, and navigation to other sections
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d1400008-f49a-4c7b-8e4f-79669ec23715) and start prompting.
+Smooth and responsive layout for a modern experience
 
-Changes made via Lovable will be committed automatically to this repo.
+🎉 Events & Competitions
 
-**Use your preferred IDE**
+Shows all upcoming coding events, hackathons, and competitions
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Students can register for events using a simple online form
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Staff and event coordinators can add new events dynamically (with title, description, image, and date/time)
 
-Follow these steps:
+Events appear instantly on the page without reload
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+💻 Projects Showcase
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Displays previous and ongoing student projects
 
-# Step 3: Install the necessary dependencies.
-npm i
+Includes descriptions, technologies used, and interactive demos/code snippets
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Supports filtering by category or technology for easy browsing
 
-**Edit a file directly in GitHub**
+🧠 Interactive Feature
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+One built-in technical interactive element (quiz, live code snippet, or animation)
 
-**Use GitHub Codespaces**
+Adds a fun and engaging experience for visitors
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+📩 Member Registration
 
-## What technologies are used for this project?
+Form for new members to join the GMU Coding Club
 
-This project is built with:
+Collects name, email, department, and reason for joining
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Displays confirmation message after successful registration
 
-## How can I deploy this project?
+📰 Newsletter Subscription
 
-Simply open [Lovable](https://lovable.dev/projects/d1400008-f49a-4c7b-8e4f-79669ec23715) and click on Share -> Publish.
+Visitors can subscribe to club updates and announcements
 
-## Can I connect a custom domain to my Lovable project?
+🔗 Social Media Integration
 
-Yes, you can!
+Quick access links to the club’s official Facebook, LinkedIn, and Instagram pages
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+📱 Responsive Design
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Fully optimized for desktop, tablet, and mobile
+
+Auto-adjusting layouts and menus for all screen sizes
