@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* GMU Brand Colors */
+    --gmu-green: 151 73% 12%;        /* #0B3B24 - Dark Green */
+    --gmu-gold: 43 65% 51%;          /* #CBA135 - Gold */
+    --gmu-white: 0 0% 100%;          /* #FFFFFF - White */
+    --gmu-green-light: 151 50% 25%;  /* Lighter green for accents */
+    --gmu-green-dark: 151 80% 8%;    /* Darker green for depth */
+    
+    --background: 0 0% 100%;
+    --foreground: 151 73% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 151 73% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 151 73% 12%;
+
+    --primary: 151 73% 12%;          /* GMU Dark Green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 65% 51%;         /* GMU Gold */
+    --secondary-foreground: 151 73% 12%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 151 30% 40%;
+
+    --accent: 43 65% 51%;            /* GMU Gold */
+    --accent-foreground: 151 73% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 151 20% 90%;
+    --input: 151 20% 90%;
+    --ring: 151 73% 12%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--gmu-green-dark)), hsl(var(--gmu-green)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--gmu-gold)), hsl(43 80% 60%));
+    --gradient-overlay: linear-gradient(180deg, transparent, hsl(var(--gmu-green-dark) / 0.8));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px hsl(var(--gmu-green) / 0.1);
+    --shadow-hover: 0 8px 30px hsl(var(--gmu-green) / 0.15);
+    --shadow-glow: 0 0 20px hsl(var(--gmu-gold) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 151 80% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 151 73% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 151 73% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 43 65% 51%;
+    --primary-foreground: 151 73% 12%;
+
+    --secondary: 151 50% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 151 50% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 43 65% 51%;
+    --accent-foreground: 151 73% 12%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 151 40% 20%;
+    --input: 151 40% 20%;
+    --ring: 43 65% 51%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+  
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
